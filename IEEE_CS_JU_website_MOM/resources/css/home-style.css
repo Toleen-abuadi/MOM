@@ -1,0 +1,169 @@
+@import "fonts/font.css";
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --section-top-bottom-padding: 60px;
+    --section-min-height: 768px;
+    --brown-main-color: #2C1818;
+    --orange-main-color: #FAA41A;
+    --line-hight-increase: 1.8;
+    --line-higth-normal: 1.6;
+    --brown-text-color: #2C1818;
+    --orange-text-color: #FAA41A;
+    --secondary-brown-text-color: hsl(0, 29%, 13%, 80%);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: 'montserrat_arabic';
+    background-color: #f8f8f8;
+    background-image: url(/resources/images/pattern2.png);
+    background-size: cover;
+    font-weight: 300;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+/* big mobiles */
+@media (min-width: 576px) {
+    .container {
+        width: 540px;
+    }
+}
+
+/*small screens*/
+@media (min-width: 768px) {
+    .container {
+        width: 720px;
+    }
+}
+
+/*medium screens*/
+@media (min-width: 992px) {
+    .container {
+        width: 960px;
+    }
+}
+
+/*big screens*/
+@media (min-width: 1200px) {
+    .container {
+        width: 1140px;
+    }
+}
+
+/*components*/
+.section-header {
+    display: block;
+    font-size: 2.188rem;
+    color: var(--orange-main-color);
+    padding: 10px;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 60px;
+}
+
+
+@media (min-width: 768px) {
+    .section-header {
+        font-size: 2.25rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .section-header {
+        font-size: 2.375rem;
+    }
+}
+
+
+/* Stars of the Month */
+
+.members-of-the-month{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+img{
+    width: calc((100% - 55px) / 3);
+    rotate: -135deg;
+}
+
+.members-of-the-month__container{
+    margin-top: 180px;
+    rotate: 90deg;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+} 
+.members-of-the-month__container div:nth-child(n){
+    display: flex;
+    gap: 80px; 
+    justify-content: center;
+}
+.members-of-the-month__container div:nth-child(2){
+  margin: -20px 0 -20px 0;
+}
+
+/*small screens*/
+@media (min-width: 768px) {
+    img{
+        width: calc((100% - 55px) / 3.5);
+    }
+    .members-of-the-month__container{
+        margin-top: 220px;
+    }
+}
+
+/*medium screens*/
+@media (min-width: 992px) {
+    img{
+        width: calc((100% - 110px) / 5);
+        rotate: -45deg;
+    }
+    .members-of-the-month__container{
+        margin-top: 0px;
+        rotate: 0deg;
+        display: flex;
+    }
+    .members-of-the-month__container div:nth-child(n){
+        gap: 80px; 
+    }
+    .members-of-the-month__container div:nth-child(2){
+      margin: -35px 0 -35px 0;
+    }
+}
+
+/*big screens*/
+@media (min-width: 1200px) {
+    .members-of-the-month__container div:nth-child(n){
+        gap: 100px;  
+    }
+}
+
+
+
